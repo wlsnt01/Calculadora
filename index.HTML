@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+
+    <title>calculadora</title>
+</head>
+
+<body>
+    <main>
+                           <!--pattern e oninput -> input so aceita numeros e operaçoes -->
+        <input  id="input" pattern="[0-9+\-*/]*" oninput="this.value = this.value.replace(/[^0-9+\-*/]/g, '')" >
+
+
+        <div class="buttons">
+            <button id="btn1" onclick="appendToInput('1')" class="bt">1</button>
+            <button id="btn2" onclick="appendToInput('2')" class="bt">2</button>
+            <button id="btn3" onclick="appendToInput('3')" class="bt">3</button>
+            <button id="btnSoma" onclick="appendToInput('+')" class="bt">+</button>
+
+            <button id="btn4" onclick="appendToInput('4')" class="bt">4</button>
+            <button id="btn5" onclick="appendToInput('5')" class="bt">5</button>
+            <button id="btn6" onclick="appendToInput('6')" class="bt">6</button>
+            <button id="btnSub" onclick="appendToInput('-')" class="bt">-</button>
+
+            <button id="btn7" onclick="appendToInput('7')" class="bt">7</button>
+            <button id="btn8" onclick="appendToInput('8')" class="bt">8</button>
+            <button id="btn9" onclick="appendToInput('9')" class="bt">9</button>
+            <button id="btnMult" onclick="appendToInput('*')" class="bt">x</button>
+
+            <button id="btnDiv" onclick="appendToInput('/')" class="bt">/</button>
+            <button id="btn0" onclick="appendToInput('0')" class="bt">0</button>
+            <button id="btnClear" onclick="clean()" class="bt">C</button>
+            <button id="btnResult" onclick="resultado()" class="bt">=</button>
+        </div>
+
+    </main>
+</body>
+<script src="./script.js"></script>
+
+</html>
